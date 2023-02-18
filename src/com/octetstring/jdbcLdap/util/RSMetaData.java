@@ -343,6 +343,14 @@ public String getColumnClassName(int x) throws java.sql.SQLException {
 	return "";
 }
 
+public <T>T unwrap(Class<T> iface) throws java.sql.SQLException {
+	throw new SQLException("Not implemented");
+}
+
+public boolean isWrapperFor(Class<?> iface) throws java.sql.SQLException {
+	throw new SQLException("Not implemented");
+}
+
 // *********************************************************************
 //
 //                END OF PUBLIC INTERFACE

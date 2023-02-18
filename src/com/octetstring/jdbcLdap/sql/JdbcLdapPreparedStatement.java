@@ -108,7 +108,11 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
     public void setURL(int param, java.net.URL uRL) throws java.sql.SQLException {
         setVal(param,uRL.toString());
     }
-    
+
+    public void setAsciiStream(int param, java.io.InputStream inputStream) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
     public void setAsciiStream(int param, java.io.InputStream inputStream, int param2) throws java.sql.SQLException {
         char[] c = new char[param2];
         try {
@@ -123,6 +127,10 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
         }
         setVal(param,String.valueOf(c));
     }
+
+    public void setAsciiStream(int param, java.io.InputStream inputStream, long param2) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
     
     public void setByte(int param, byte param1) throws java.sql.SQLException {
         setVal(param,Byte.toString(param1));
@@ -139,7 +147,11 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
     public void setDate(int param, java.sql.Date date) throws java.sql.SQLException {
         setVal(param,date.toString());
     }
-    
+
+	public void setBinaryStream(int param, java.io.InputStream inputStream) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
     public void setBinaryStream(int param, java.io.InputStream inputStream, int param2) throws java.sql.SQLException {
         char[] c = new char[param2];
         try {
@@ -154,6 +166,10 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
         }
         setVal(param,String.valueOf(c));
     }
+
+	public void setBinaryStream(int param, java.io.InputStream inputStream, long param2) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
     
     public java.sql.ParameterMetaData getParameterMetaData() throws java.sql.SQLException {
         return null;
@@ -165,7 +181,15 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
     
     public void setBlob(int param, java.sql.Blob blob) throws java.sql.SQLException {
     }
-    
+
+	public void setBlob(int param, java.io.InputStream inputStream) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void setBlob(int param, java.io.InputStream inputStream, long length) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
     public java.sql.ResultSet executeQuery() throws java.sql.SQLException {
         if (this.con.isDSML()) {
         	res.unpackJldap((LDAPSearchResults) stmt.executeQuery(),stmt.getRetrieveDN(),this.stmt.getSqlStore().getFrom(),con.getBaseDN(),this.stmt.getSqlStore().getRevFieldMap());
@@ -177,7 +201,11 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
         this.rs = new LdapResultSet(con,this,res,((JdbcLdapSelect) stmt).getBaseContext());
         return rs;
     }
-    
+
+	public void setCharacterStream(int param, java.io.Reader reader) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
     public void setCharacterStream(int param, java.io.Reader reader, int param2) throws java.sql.SQLException {
         char[] c = new char[param2];
         try {
@@ -192,6 +220,10 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
         }
         setVal(param,String.valueOf(c));
     }
+
+	public void setCharacterStream(int param, java.io.Reader reader, long param2) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
     
     public java.sql.ResultSetMetaData getMetaData() throws java.sql.SQLException {
         return rs.getMetaData();
@@ -250,6 +282,10 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
     public int executeUpdate() throws java.sql.SQLException {
         return ((Integer) stmt.executeUpdate()).intValue();
     }
+
+	public void setSQLXML(int parameterIndex, java.sql.SQLXML xmlObject) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
     
     public void setString(int param, java.lang.String str) throws java.sql.SQLException {
         setVal(param,str);
@@ -257,7 +293,15 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
     
     public void setClob(int param, java.sql.Clob clob) throws java.sql.SQLException {
     }
-    
+
+	public void setClob(int param, java.io.Reader reader) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void setClob(int param, java.io.Reader reader, long length) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
     public void addBatch() throws java.sql.SQLException {
         statements.add(stmt);
         loadSQL(stmt.getSqlStore());
@@ -265,7 +309,31 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
     
     public void clearParameters() throws java.sql.SQLException {
     }
-    
+
+	public void setNCharacterStream(int parameterIndex, java.io.Reader reader) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void setNCharacterStream(int parameterIndex, java.io.Reader reader, long length) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void setNClob(int parameterIndex, java.sql.NClob value) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void setNClob(int parameterIndex, java.io.Reader reader) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void setNClob(int parameterIndex, java.io.Reader reader, long length) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void setNString(int parameterIndex, java.lang.String value) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
     public void setNull(int param, int param1) throws java.sql.SQLException {
         setVal(param,null);
     }
@@ -273,5 +341,9 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
     public void setNull(int param, int param1, java.lang.String str) throws java.sql.SQLException {
         setVal(param,null);
     }
+
+	public void setRowId(int parameterIndex, java.sql.RowId x) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
     
 }

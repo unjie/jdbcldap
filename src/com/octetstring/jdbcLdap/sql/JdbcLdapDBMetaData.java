@@ -9,6 +9,7 @@ package com.octetstring.jdbcLdap.sql;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
+import java.sql.RowIdLifetime;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -239,6 +240,20 @@ public class JdbcLdapDBMetaData implements DatabaseMetaData {
 	}
 
 	/* (non-Javadoc)
+	 * @see java.sql.DatabaseMetaData#getRowIdLifetime()
+	 */
+	public RowIdLifetime getRowIdLifetime() throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/* (non-Javadoc)
+	 * @see java.sql.DatabaseMetaData#getSchemas(String, String)
+	 */
+	public ResultSet getSchemas(String catalog, String schemaPattern) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/* (non-Javadoc)
 	 * @see java.sql.DatabaseMetaData#getSQLStateType()
 	 */
 	public int getSQLStateType() throws SQLException {
@@ -260,6 +275,13 @@ public class JdbcLdapDBMetaData implements DatabaseMetaData {
 	public boolean allTablesAreSelectable() throws SQLException {
 		
 		return true;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.sql.DatabaseMetaData#autoCommitFailureClosesAllResultSets()
+	 */
+	public boolean autoCommitFailureClosesAllResultSets() throws SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	/* (non-Javadoc)
@@ -817,6 +839,13 @@ public class JdbcLdapDBMetaData implements DatabaseMetaData {
 	}
 
 	/* (non-Javadoc)
+	 * @see java.sql.DatabaseMetaData#supportsStoredFunctionsUsingCallSyntax()
+	 */
+	public boolean supportsStoredFunctionsUsingCallSyntax() throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/* (non-Javadoc)
 	 * @see java.sql.DatabaseMetaData#supportsStoredProcedures()
 	 */
 	public boolean supportsStoredProcedures() throws SQLException {
@@ -1037,6 +1066,13 @@ public class JdbcLdapDBMetaData implements DatabaseMetaData {
 	}
 
 	/* (non-Javadoc)
+	 * @see java.sql.DatabaseMetaData#getClientInfoProperties()
+	 */
+	public ResultSet getClientInfoProperties() throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/* (non-Javadoc)
 	 * @see java.sql.DatabaseMetaData#getDatabaseProductName()
 	 */
 	public String getDatabaseProductName() throws SQLException {
@@ -1074,6 +1110,20 @@ public class JdbcLdapDBMetaData implements DatabaseMetaData {
 	public String getExtraNameCharacters() throws SQLException {
 		
 		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.sql.DatabaseMetaData#getFunctionColumns(String, String, String, String)
+	 */
+	public ResultSet getFunctionColumns(String catalog, String schemaPattern, String functionNamePattern, String columnNamePattern) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/* (non-Javadoc)
+	 * @see java.sql.DatabaseMetaData#getFunctions(String, String, String)
+	 */
+	public ResultSet getFunctions(String catalog, String schemaPattern, String functionNamePattern) throws SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	/* (non-Javadoc)
@@ -1383,6 +1433,20 @@ public class JdbcLdapDBMetaData implements DatabaseMetaData {
 			String foreignSchema, String foreignTable) throws SQLException {
 		
 		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.sql.Wrapper#unwrap(Class<T>)
+	 */
+	public <T>T unwrap(Class<T> iface) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/* (non-Javadoc)
+	 * @see java.sql.Wrapper#isWrapperFor(Class<?>)
+	 */
+	public boolean isWrapperFor(Class<?> iface) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 

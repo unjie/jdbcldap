@@ -662,7 +662,59 @@ public class JndiLdapConnection implements java.sql.Connection {
     			throw new SQLException("LDAP Does Not Support Transactions");
     		}
     }
-    
+
+	public java.sql.Clob createClob() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.sql.Blob createBlob() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.sql.NClob createNClob() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.sql.SQLXML createSQLXML() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public boolean isValid(int timeout) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void setClientInfo(String name, String value) throws java.sql.SQLClientInfoException {
+		throw new SQLClientInfoException("Not implemented", null);
+	}
+
+	public void setClientInfo(Properties properties) throws java.sql.SQLClientInfoException {
+		throw new SQLClientInfoException("Not implemented", null);
+	}
+
+	public String getClientInfo(String name) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public Properties getClientInfo() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.sql.Array createArrayOf(String typeName, Object[] elements) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.sql.Struct createStruct(String typeName, Object[] attributes) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public <T>T unwrap(Class<T> iface) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public boolean isWrapperFor(Class<?> iface) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	/**
 	 * @return trie if expanding rows
 	 */

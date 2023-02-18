@@ -14,11 +14,14 @@ import java.sql.Array;
 import java.sql.Blob;
 import java.sql.Clob;
 import java.sql.Date;
+import java.sql.NClob;
 import java.sql.Ref;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
+import java.sql.RowId;
 import java.sql.SQLException;
 import java.sql.SQLWarning;
+import java.sql.SQLXML;
 import java.sql.Statement;
 import java.sql.Time;
 import java.sql.Timestamp;
@@ -360,6 +363,13 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see java.sql.ResultSet#getHoldability()
+	 */
+	public int getHoldability() throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#getInt(int)
 	 */
 	public int getInt(int columnIndex) throws SQLException {
@@ -647,6 +657,13 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see java.sql.ResultSet#isClosed()
+	 */
+	public boolean isClosed() throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#isFirst()
 	 */
 	public boolean isFirst() throws SQLException {
@@ -691,6 +708,20 @@ public  class ObjRS implements ResultSet, Serializable {
 	 */
 	public int getRow() throws SQLException {
 		return 0;
+	}
+
+	/**
+	 * @see java.sql.ResultSet#getRowId(int)
+	 */
+	public RowId getRowId(int columnIndex) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#getRowId(String)
+	 */
+	public RowId getRowId(String columnLabel) throws SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	/**
@@ -776,6 +807,100 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see updateNCharacterStream(int, Reader)
+	 */
+	public void updateNCharacterStream(int columnIndex, Reader x)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see updateNCharacterStream(int, Reader, long)
+	 */
+	public void updateNCharacterStream(int columnIndex, Reader x, long length)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see updateNCharacterStream(String, Reader)
+	 */
+	public void updateNCharacterStream(String columnLabel, Reader x)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see updateNCharacterStream(String, Reader, long)
+	 */
+	public void updateNCharacterStream(String columnLabel, Reader x, long length)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see updateNClob(int, java.sql.NClob)
+	 */
+	public void updateNClob(int columnIndex, java.sql.NClob nClob)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see updateNClob(int, Reader)
+	 */
+	public void updateNClob(int columnIndex, Reader reader)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see updateNClob(int, Reader, long)
+	 */
+	public void updateNClob(int columnIndex, Reader reader, long length)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see updateNClob(java.lang.String, java.sql.NClob)
+	 */
+	public void updateNClob(java.lang.String columnLabel, java.sql.NClob nClob)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see updateNClob(java.lang.String, Reader)
+	 */
+	public void updateNClob(java.lang.String columnLabel, Reader reader)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see updateNClob(java.lang.String, Reader, long)
+	 */
+	public void updateNClob(java.lang.String columnLabel, Reader reader, long length)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateNString(int, String)
+	 */
+	public void updateNString(int columnIndex, String nString) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateNString(String, String)
+	 */
+	public void updateNString(String columnLabel, String nString) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#updateNull(int)
 	 */
 	public void updateNull(int columnIndex) throws SQLException {
@@ -831,6 +956,22 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see java.sql.ResultSet#updateSQLXML(int, SQLXML)
+	 */
+	public void updateSQLXML(int columnIndex, SQLXML xmlObject)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateSQLXML(String, SQLXML)
+	 */
+	public void updateSQLXML(String columnLabel, SQLXML xmlObject)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#updateString(int, String)
 	 */
 	public void updateString(int columnIndex, String x) throws SQLException {
@@ -862,10 +1003,34 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see java.sql.ResultSet#updateAsciiStream(int, InputStream)
+	 */
+	public void updateAsciiStream(int columnIndex, InputStream x)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#updateAsciiStream(int, InputStream, int)
 	 */
 	public void updateAsciiStream(int columnIndex, InputStream x, int length)
 		throws SQLException {
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateAsciiStream(int, InputStream, long)
+	 */
+	public void updateAsciiStream(int columnIndex, InputStream x, long length)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateBinaryStream(int, InputStream)
+	 */
+	public void updateBinaryStream(int columnIndex, InputStream x)
+		throws SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	/**
@@ -876,10 +1041,33 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see java.sql.ResultSet#updateBinaryStream(int, InputStream, long)
+	 */
+	public void updateBinaryStream(int columnIndex, InputStream x, long length)
+		throws SQLException {
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateCharacterStream(int, Reader)
+	 */
+	public void updateCharacterStream(int columnIndex, Reader x)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#updateCharacterStream(int, Reader, int)
 	 */
 	public void updateCharacterStream(int columnIndex, Reader x, int length)
 		throws SQLException {
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateCharacterStream(int, Reader, long)
+	 */
+	public void updateCharacterStream(int columnIndex, Reader x, long length)
+		throws SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	/**
@@ -983,10 +1171,36 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see java.sql.ResultSet#updateAsciiStream(String, InputStream)
+	 */
+	public void updateAsciiStream(String columnName, InputStream x)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#updateAsciiStream(String, InputStream, int)
 	 */
 	public void updateAsciiStream(String columnName, InputStream x, int length)
 		throws SQLException {
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateAsciiStream(String, InputStream, long)
+	 */
+	public void updateAsciiStream(String columnName, InputStream x, long length)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateBinaryStream(String, InputStream)
+	 */
+	public void updateBinaryStream(
+		String columnName,
+		InputStream x)
+		throws SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	/**
@@ -1000,6 +1214,27 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see java.sql.ResultSet#updateBinaryStream(String, InputStream, long)
+	 */
+	public void updateBinaryStream(
+		String columnName,
+		InputStream x,
+		long length)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateCharacterStream(String, Reader)
+	 */
+	public void updateCharacterStream(
+		String columnName,
+		Reader reader)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#updateCharacterStream(String, Reader, int)
 	 */
 	public void updateCharacterStream(
@@ -1007,6 +1242,17 @@ public  class ObjRS implements ResultSet, Serializable {
 		Reader reader,
 		int length)
 		throws SQLException {
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateCharacterStream(String, Reader, long)
+	 */
+	public void updateCharacterStream(
+		String columnName,
+		Reader reader,
+		long length)
+		throws SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	/**
@@ -1032,6 +1278,20 @@ public  class ObjRS implements ResultSet, Serializable {
 	 * @see java.sql.ResultSet#updateRow()
 	 */
 	public void updateRow() throws SQLException {
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateRowId(int, RowId)
+	 */
+	public void updateRowId(int columnIndex, RowId x) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateRowId(String, RowId)
+	 */
+	public void updateRowId(String columnLabel, RowId x) throws SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	/**
@@ -1065,10 +1325,70 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see java.sql.ResultSet#getSQLXML(int)
+	 */
+	public SQLXML getSQLXML(int columnIndex) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#getSQLXML(String)
+	 */
+	public SQLXML getSQLXML(String columnLabel) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#getStatement()
 	 */
 	public Statement getStatement() throws SQLException {
 		return null;
+	}
+
+	/**
+	 * @see java.sql.ResultSet#getNCharacterStream(int)
+	 */
+	public Reader getNCharacterStream(int columnIndex)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#getNCharacterStream(String)
+	 */
+	public Reader getNCharacterStream(String columnLabel)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#getNClob(int)
+	 */
+	public NClob getNClob(int columnIndex) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#getNClob(String)
+	 */
+	public NClob getNClob(String columnLabel) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#getNString(int)
+	 */
+	public String getNString(int columnIndex)
+		throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#getNString(String)
+	 */
+	public String getNString(String columnLabel)
+		throws SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	/**
@@ -1224,6 +1544,34 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see java.sql.ResultSet#updateBlob(int, InputStream)
+	 */
+	public void updateBlob(int columnIndex, InputStream inputStream) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateBlob(int, InputStream, long)
+	 */
+	public void updateBlob(int columnIndex, InputStream inputStream, long length) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateBlob(String, InputStream)
+	 */
+	public void updateBlob(String columnLabel, InputStream inputStream) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateBlob(String, InputStream, long)
+	 */
+	public void updateBlob(String columnLabel, InputStream inputStream, long length) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#updateClob(int, Clob)
 	 */
 	public void updateClob(int columnIndex, Clob x) throws SQLException {
@@ -1236,6 +1584,34 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see java.sql.ResultSet#updateClob(int, Reader)
+	 */
+	public void updateClob(int columnIndex, Reader reader) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateClob(int, Reader, long)
+	 */
+	public void updateClob(int columnIndex, Reader reader, long length) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateClob(String, Reader)
+	 */
+	public void updateClob(String columnLabel, Reader reader) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.ResultSet#updateClob(String, Reader, long)
+	 */
+	public void updateClob(String columnLabel, Reader reader, long length) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#updateArray(int, Array)
 	 */
 	public void updateArray(int columnIndex, Array x) throws SQLException {
@@ -1245,6 +1621,20 @@ public  class ObjRS implements ResultSet, Serializable {
 	 * @see java.sql.ResultSet#updateArray(String, Array)
 	 */
 	public void updateArray(String columnName, Array x) throws SQLException {
+	}
+
+	/**
+	 * @see java.sql.Wrapper#unwrap(Class<T>)
+	 */
+	public <T>T unwrap(Class<T> iface) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
+	 * @see java.sql.Wrapper#isWrapperFor(Class<?>)
+	 */
+	public boolean isWrapperFor(Class<?> iface) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 }

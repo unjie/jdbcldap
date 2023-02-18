@@ -307,6 +307,14 @@ public class JdbcLdapStatement implements java.sql.Statement {
 		return null;
 	}
 
+	public boolean isClosed() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public boolean isPoolable() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	public void setCursorName(java.lang.String str)
 		throws java.sql.SQLException {
 	}
@@ -329,8 +337,20 @@ public class JdbcLdapStatement implements java.sql.Statement {
 		this.maxResults = param;
 	}
 
+	public void setPoolable(boolean poolable) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	public void setQueryTimeout(int param) throws java.sql.SQLException {
 		this.timeOut = param;
+	}
+
+	public <T>T unwrap(Class<T> iface) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public boolean isWrapperFor(Class<?> iface) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 }

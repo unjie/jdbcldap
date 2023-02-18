@@ -333,6 +333,10 @@ public class LdapResultSet implements java.sql.ResultSet {
 		return Float.parseFloat(getByName(str));
 	}
 
+	public int getHoldability() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	public int getInt(int param) throws java.sql.SQLException {
 		String val = getByNum(param);
 		return val.length() == 0 ? 0 : Integer.parseInt(val);
@@ -358,6 +362,36 @@ public class LdapResultSet implements java.sql.ResultSet {
 		return new JdbcLdapMetaData(
 			this.unpack,
 			this.baseDN);
+	}
+
+	public java.io.Reader getNCharacterStream(int columnIndex)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.sql.NClob getNClob(int columnIndex)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.sql.NClob getNClob(java.lang.String columnLabel)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.lang.String getNString(int columnIndex)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.lang.String getNString(java.lang.String columnLabel)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	public java.lang.Object getObject(int param) throws java.sql.SQLException {
@@ -393,12 +427,30 @@ public class LdapResultSet implements java.sql.ResultSet {
 		return pos;
 	}
 
+	public java.sql.RowId getRowId(int columnIndex)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.sql.RowId getRowId(java.lang.String columnLabel)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	public short getShort(int param) throws java.sql.SQLException {
 		return Short.parseShort(getByNum(param));
 	}
 
 	public short getShort(java.lang.String str) throws java.sql.SQLException {
 		return Short.parseShort(getByName(str));
+	}
+
+	public java.sql.SQLXML getSQLXML(int columnIndex) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.sql.SQLXML getSQLXML(java.lang.String columnLabel) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	public java.sql.Statement getStatement() throws java.sql.SQLException {
@@ -508,6 +560,10 @@ public class LdapResultSet implements java.sql.ResultSet {
 		return pos == -1;
 	}
 
+	public boolean isClosed() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	public boolean isFirst() throws java.sql.SQLException {
 		return pos == 0;
 	}
@@ -580,8 +636,30 @@ public class LdapResultSet implements java.sql.ResultSet {
 
 	public void updateAsciiStream(
 		int param,
+		java.io.InputStream inputStream)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateAsciiStream(
+		int param,
 		java.io.InputStream inputStream,
 		int param2)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateAsciiStream(
+		int param,
+		java.io.InputStream inputStream,
+		long param2)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateAsciiStream(
+		java.lang.String str,
+		java.io.InputStream inputStream)
 		throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
@@ -590,6 +668,14 @@ public class LdapResultSet implements java.sql.ResultSet {
 		java.lang.String str,
 		java.io.InputStream inputStream,
 		int param)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateAsciiStream(
+		java.lang.String str,
+		java.io.InputStream inputStream,
+		long param)
 		throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
@@ -608,8 +694,30 @@ public class LdapResultSet implements java.sql.ResultSet {
 
 	public void updateBinaryStream(
 		int param,
+		java.io.InputStream inputStream)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateBinaryStream(
+		int param,
 		java.io.InputStream inputStream,
 		int param2)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateBinaryStream(
+		int param,
+		java.io.InputStream inputStream,
+		long param2)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateBinaryStream(
+		java.lang.String str,
+		java.io.InputStream inputStream)
 		throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
@@ -622,12 +730,40 @@ public class LdapResultSet implements java.sql.ResultSet {
 		throw new SQLException("Not implemented");
 	}
 
+	public void updateBinaryStream(
+		java.lang.String str,
+		java.io.InputStream inputStream,
+		long param)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	public void updateBlob(int param, java.sql.Blob blob)
 		throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
 
 	public void updateBlob(java.lang.String str, java.sql.Blob blob)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateBlob(int columnIndex, java.io.InputStream inputStream)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateBlob(int columnIndex, java.io.InputStream inputStream, long length)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateBlob(java.lang.String columnLabel, java.io.InputStream inputStream)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateBlob(java.lang.String columnLabel, java.io.InputStream inputStream, long length)
 		throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
@@ -664,8 +800,30 @@ public class LdapResultSet implements java.sql.ResultSet {
 
 	public void updateCharacterStream(
 		int param,
+		java.io.Reader reader)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateCharacterStream(
+		int param,
 		java.io.Reader reader,
 		int param2)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateCharacterStream(
+		int param,
+		java.io.Reader reader,
+		long param2)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateCharacterStream(
+		java.lang.String str,
+		java.io.Reader reader)
 		throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
@@ -678,12 +836,40 @@ public class LdapResultSet implements java.sql.ResultSet {
 		throw new SQLException("Not implemented");
 	}
 
+	public void updateCharacterStream(
+		java.lang.String str,
+		java.io.Reader reader,
+		long param)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	public void updateClob(int param, java.sql.Clob clob)
 		throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
 
 	public void updateClob(java.lang.String str, java.sql.Clob clob)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateClob(int columnIndex, java.io.Reader reader)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateClob(int columnIndex, java.io.Reader reader, long length)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateClob(java.lang.String columnLabel, java.io.Reader reader)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateClob(java.lang.String columnLabel, java.io.Reader reader, long length)
 		throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
@@ -737,6 +923,64 @@ public class LdapResultSet implements java.sql.ResultSet {
 		throw new SQLException("Not implemented");
 	}
 
+	public void updateNCharacterStream(int columnIndex, java.io.Reader x)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateNCharacterStream(int columnIndex, java.io.Reader x, long length)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateNCharacterStream(java.lang.String columnLabel, java.io.Reader x)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateNCharacterStream(java.lang.String columnLabel, java.io.Reader x, long length)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateNClob(int columnIndex, java.sql.NClob nClob)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateNClob(int columnIndex, java.io.Reader reader)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateNClob(int columnIndex, java.io.Reader reader, long length)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateNClob(java.lang.String columnLabel, java.sql.NClob nClob)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateNClob(java.lang.String columnLabel, java.io.Reader reader)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateNClob(java.lang.String columnLabel, java.io.Reader reader, long length)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateNString(int columnIndex, java.lang.String nString) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateNString(java.lang.String columnLabel, java.lang.String nString) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	public void updateNull(int param) throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
@@ -782,12 +1026,32 @@ public class LdapResultSet implements java.sql.ResultSet {
 		throw new SQLException("Not implemented");
 	}
 
+	public void updateRowId(int columnIndex, java.sql.RowId x)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateRowId(java.lang.String columnLabel, java.sql.RowId x)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	public void updateShort(int param, short param1)
 		throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
 
 	public void updateShort(java.lang.String str, short param)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateSQLXML(int columnIndex, java.sql.SQLXML xmlObject)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void updateSQLXML(java.lang.String columnLabel, java.sql.SQLXML xmlObject)
 		throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
@@ -826,6 +1090,14 @@ public class LdapResultSet implements java.sql.ResultSet {
 
 	public boolean wasNull() throws java.sql.SQLException {
 		return this.wasNull;
+	}
+
+	public <T>T unwrap(Class<T> iface) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public boolean isWrapperFor(Class<?> iface) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 }
