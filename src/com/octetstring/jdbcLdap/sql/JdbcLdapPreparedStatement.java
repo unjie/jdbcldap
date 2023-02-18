@@ -70,6 +70,7 @@ public class JdbcLdapPreparedStatement extends JdbcLdapStatement implements java
 
 	
     
+	@Deprecated
     public void setUnicodeStream(int param, java.io.InputStream inputStream, int param2) throws java.sql.SQLException {
         char[] c = new char[param2];
         try {

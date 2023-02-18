@@ -202,11 +202,13 @@ public class LdapResultSet implements java.sql.ResultSet {
 		return new BigDecimal(getByName(str));
 	}
 
+	@Deprecated
 	public java.math.BigDecimal getBigDecimal(int param, int param1)
 		throws java.sql.SQLException {
 		return new BigDecimal(getByNum(param));
 	}
 
+	@Deprecated
 	public java.math.BigDecimal getBigDecimal(java.lang.String str, int param)
 		throws java.sql.SQLException {
 		return new BigDecimal(getByName(str));
@@ -478,11 +480,13 @@ public class LdapResultSet implements java.sql.ResultSet {
 		}
 	}
 
+	@Deprecated
 	public java.io.InputStream getUnicodeStream(int param)
 		throws java.sql.SQLException {
 		return new ByteArrayInputStream(getByNum(param).getBytes(StandardCharsets.UTF_8));
 	}
 
+	@Deprecated
 	public java.io.InputStream getUnicodeStream(java.lang.String str)
 		throws java.sql.SQLException {
 		return new ByteArrayInputStream(getByName(str).getBytes(StandardCharsets.UTF_8));
