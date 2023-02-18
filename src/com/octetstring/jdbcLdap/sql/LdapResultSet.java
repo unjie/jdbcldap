@@ -28,6 +28,7 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import java.math.BigDecimal;
+import java.nio.charset.StandardCharsets;
 
 /**
  *Stores the result from a query
@@ -183,12 +184,12 @@ public class LdapResultSet implements java.sql.ResultSet {
 
 	public java.io.InputStream getAsciiStream(int param)
 		throws java.sql.SQLException {
-		return new StringBufferInputStream(getByNum(param));
+		return new ByteArrayInputStream(getByNum(param).getBytes(StandardCharsets.US_ASCII));
 	}
 
 	public java.io.InputStream getAsciiStream(java.lang.String str)
 		throws java.sql.SQLException {
-		return new StringBufferInputStream(getByName(str));
+		return new ByteArrayInputStream(getByName(str).getBytes(StandardCharsets.US_ASCII));
 	}
 
 	public java.math.BigDecimal getBigDecimal(int param)
@@ -479,12 +480,12 @@ public class LdapResultSet implements java.sql.ResultSet {
 
 	public java.io.InputStream getUnicodeStream(int param)
 		throws java.sql.SQLException {
-		return new StringBufferInputStream(getByNum(param));
+		return new ByteArrayInputStream(getByNum(param).getBytes(StandardCharsets.UTF_8));
 	}
 
 	public java.io.InputStream getUnicodeStream(java.lang.String str)
 		throws java.sql.SQLException {
-		return new StringBufferInputStream(getByName(str));
+		return new ByteArrayInputStream(getByName(str).getBytes(StandardCharsets.UTF_8));
 	}
 
 	public java.sql.SQLWarning getWarnings() throws java.sql.SQLException {
