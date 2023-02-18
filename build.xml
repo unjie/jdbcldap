@@ -16,7 +16,7 @@
 
     <target depends="init" name="build" description="Builds the drivers" >
         <mkdir dir="${classes}"/>
-        <javac destdir="${classes}" includes="com/octetstring/**" srcdir="${src}">
+        <javac source="8" destdir="${classes}" includes="com/octetstring/**" srcdir="${src}">
             <classpath>
                 <pathelement location="${lib}/junit.jar" />
             </classpath>
