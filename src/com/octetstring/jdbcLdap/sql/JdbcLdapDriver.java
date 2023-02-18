@@ -111,7 +111,11 @@ public class JdbcLdapDriver implements java.sql.Driver {
     public int getMinorVersion() {
         return MINOR_VERSION;
     }
-    
+
+	public java.util.logging.Logger getParentLogger() throws java.sql.SQLFeatureNotSupportedException {
+		throw new SQLFeatureNotSupportedException("Not implemented");
+	}
+
     public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String str, java.util.Properties properties) throws java.sql.SQLException {
         DriverPropertyInfo[] props = new DriverPropertyInfo[5];
         props[0] = new DriverPropertyInfo("user","Security Principal");

@@ -526,7 +526,11 @@ public class JndiLdapConnection implements java.sql.Connection {
     public java.sql.Savepoint setSavepoint() throws java.sql.SQLException {
         return null;
     }
-    
+
+	public void setSchema(String schema) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
     public boolean isReadOnly() throws java.sql.SQLException {
         return false;
     }
@@ -534,7 +538,11 @@ public class JndiLdapConnection implements java.sql.Connection {
     public void setHoldability(int param) throws java.sql.SQLException {
         
     }
-    
+
+	public void setNetworkTimeout(java.util.concurrent.Executor executor, int milliseconds) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
     public void rollback() throws java.sql.SQLException {
         if (! this.ignoreTransactions) {
         	throw new SQLException("LDAP Does Not Support Transactions");
@@ -653,7 +661,19 @@ public class JndiLdapConnection implements java.sql.Connection {
     public java.sql.DatabaseMetaData getMetaData() throws java.sql.SQLException {
         return new JdbcLdapDBMetaData(this);
     }
-    
+
+	public int getNetworkTimeout() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public String getSchema() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public void abort(java.util.concurrent.Executor executor) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
     public void clearWarnings() throws java.sql.SQLException {
     }
     

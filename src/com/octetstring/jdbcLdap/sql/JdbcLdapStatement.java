@@ -157,6 +157,10 @@ public class JdbcLdapStatement implements java.sql.Statement {
 	public void close() throws java.sql.SQLException {
 	}
 
+	public void closeOnCompletion() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	public boolean execute(java.lang.String str) throws java.sql.SQLException {
 		executeQuery(str);
 		return true;
@@ -308,6 +312,10 @@ public class JdbcLdapStatement implements java.sql.Statement {
 	}
 
 	public boolean isClosed() throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public boolean isCloseOnCompletion() throws java.sql.SQLException {
 		throw new SQLException("Not implemented");
 	}
 

@@ -398,18 +398,27 @@ public class LdapResultSet implements java.sql.ResultSet {
 		return getByNum(param);
 	}
 
+	public <T>T getObject(int param, Class<T> type) throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
 	public java.lang.Object getObject(java.lang.String str)
 		throws java.sql.SQLException {
 		return getByName(str);
 	}
 
-	public java.lang.Object getObject(int param, java.util.Map map)
+	public <T>T getObject(java.lang.String str, Class<T> type)
+		throws java.sql.SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	public java.lang.Object getObject(int param, java.util.Map<String, Class<?>> map)
 		throws java.sql.SQLException {
 		return getByNum(param);
 
 	}
 
-	public java.lang.Object getObject(java.lang.String str, java.util.Map map)
+	public java.lang.Object getObject(java.lang.String str, java.util.Map<String, Class<?>> map)
 		throws java.sql.SQLException {
 		return getByName(str);
 	}

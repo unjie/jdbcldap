@@ -601,10 +601,24 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
+	 * @see java.sql.ResultSet#getObject(int, Class<T>)
+	 */
+	public <T>T getObject(int columnIndex, Class<T> type) throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/**
 	 * @see java.sql.ResultSet#getObject(String)
 	 */
 	public Object getObject(String columnName) throws SQLException {
 		return null;
+	}
+
+	/**
+	 * @see java.sql.ResultSet#getObject(String, Class<T>)
+	 */
+	public <T>T getObject(String columnName, Class<T> type) throws SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	/**
@@ -1392,9 +1406,9 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
-	 * @see java.sql.ResultSet#getObject(int, Map)
+	 * @see java.sql.ResultSet#getObject(int, Map<String, Class<?>>)
 	 */
-	public Object getObject(int i, Map map) throws SQLException {
+	public Object getObject(int i, Map<String, Class<?>> map) throws SQLException {
 		return null;
 	}
 
@@ -1427,9 +1441,9 @@ public  class ObjRS implements ResultSet, Serializable {
 	}
 
 	/**
-	 * @see java.sql.ResultSet#getObject(String, Map)
+	 * @see java.sql.ResultSet#getObject(String, Map<String, Class<?>>)
 	 */
-	public Object getObject(String colName, Map map) throws SQLException {
+	public Object getObject(String colName, Map<String, Class<?>> map) throws SQLException {
 		return null;
 	}
 

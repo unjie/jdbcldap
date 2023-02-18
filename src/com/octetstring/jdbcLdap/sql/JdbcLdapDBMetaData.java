@@ -309,6 +309,13 @@ public class JdbcLdapDBMetaData implements DatabaseMetaData {
 	}
 
 	/* (non-Javadoc)
+	 * @see java.sql.DatabaseMetaData#generatedKeyAlwaysReturned()
+	 */
+	public boolean generatedKeyAlwaysReturned() throws SQLException {
+		throw new SQLException("Not implemented");
+	}
+
+	/* (non-Javadoc)
 	 * @see java.sql.DatabaseMetaData#isCatalogAtStart()
 	 */
 	public boolean isCatalogAtStart() throws SQLException {
@@ -1148,6 +1155,13 @@ public class JdbcLdapDBMetaData implements DatabaseMetaData {
 	public String getProcedureTerm() throws SQLException {
 		
 		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.sql.DatabaseMetaData#getPseudoColumns()
+	 */
+	public ResultSet getPseudoColumns(String catalog, String schemaPattern, String tableNamePattern, String columnNamePattern) throws SQLException {
+		throw new SQLException("Not implemented");
 	}
 
 	/* (non-Javadoc)
