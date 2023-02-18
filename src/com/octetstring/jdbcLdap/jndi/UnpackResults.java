@@ -349,7 +349,7 @@ public class UnpackResults {
 			if (bval == null) {
 				bval = new byte[0];
 			}
-			if (Base64.isValidUTF8(bval, /*isUCS2Only=*/false)) {
+			if (com.novell.ldap.util.Base64.isValidUTF8(bval, /*isUCS2Only=*/false)) {
 				svals = attrib.getStringValueArray();
 				if ("1.3.6.1.4.1.1466.115.121.1.41".equals(
 					con.schema.getAttributeSchema(attrib.getName()).getSyntaxString())) {
@@ -364,7 +364,7 @@ public class UnpackResults {
 				byteVals = attrib.getByteValueArray();
 				svals  = new String[byteVals.length];
 				for (int i=0,m=byteVals.length;i<m;i++) {
-					svals[i] = Base64.encode(byteVals[i]);
+					svals[i] = com.novell.ldap.util.Base64.encode(byteVals[i]);
 				}
 				
 			}
