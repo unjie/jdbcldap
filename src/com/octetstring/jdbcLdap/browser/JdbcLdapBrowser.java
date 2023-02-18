@@ -146,7 +146,7 @@ public class JdbcLdapBrowser {
 			
 			for (int i=0;i<children.length;i++) {
 				try {
-					urls[i] = children[i].toURL();
+					urls[i] = children[i].toURI().toURL();
 				} catch (MalformedURLException e2) {
 					MessageDialog.openError(Display.getCurrent().getActiveShell(),"Could not load drivers",e2.toString());
 				}
