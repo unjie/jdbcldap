@@ -22,6 +22,9 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.*;
 import org.eclipse.swt.events.*;
+
+import java.nio.charset.StandardCharsets;
+
 /**
  * @author Marc Boorshtein
  *
@@ -153,7 +156,7 @@ class DoRebind extends SelectionAdapter {
 	 */
 	public void widgetSelected(SelectionEvent e) {
 		try {
-			rebind.con.getConnection().bind(3,rebind.user.getText(),rebind.pass.getText());
+			rebind.con.getConnection().bind(3,rebind.user.getText(),rebind.pass.getText().getBytes(StandardCharsets.UTF_8));
 			rebind.conInfo.user = rebind.user.getText();
 			rebind.conInfo.pass = rebind.pass.getText();
 			
